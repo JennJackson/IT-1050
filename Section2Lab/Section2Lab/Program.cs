@@ -5,30 +5,32 @@
         static void Main(string[] args)
         {
 
+            // NEED TO INCLUDE SPOUSES IN METHOD AND DECLARE SPOUSE VARIABLES.
+            // WORKING W.O SPOUSES 
+
+
             Person p1 = new Person();
-
-            System.Console.Write("What is your first name? ");
-            p1.firstName = System.Console.ReadLine();
-
-            System.Console.Write("What is your last name? ");
-            p1.lastName = System.Console.ReadLine();
-
-            System.Console.Write("What is your age? ");
-            p1.age = int.Parse(System.Console.ReadLine());
+            /*
 
             System.Console.Write("Are you married? (Yes/No) ");
             p1.isMarried = bool.Parse(System.Console.ReadLine());
-
+            
             System.Console.Write("What is the first name of your spouse? ");
             p1.spouse = System.Console.ReadLine();
 
             System.Console.Write("What is the age of your spouse? ");
             p1.spouse = System.Console.ReadLine();
-
-            //p1.spouse;
+            */
+            
 
             Person p2 = new Person();
-            //p2.spouse;
+
+            p1.AskForNameAndAge();
+            p1.PrintNameAndAge();
+
+            p2.AskForNameAndAge();
+            p2.PrintNameAndAge();
+            
 
             System.Console.Write("Press any key to continue...");
             System.Console.ReadKey();
