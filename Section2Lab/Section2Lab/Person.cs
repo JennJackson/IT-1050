@@ -26,6 +26,31 @@
 
         }
 
+        public void AskForSpouseName()
+        {
+
+            System.Console.Write("Are you married? (True/False) ");
+            isMarried = bool.Parse(System.Console.ReadLine());
+            
+            // ADD THIS
+            // IF MARRIED, THEN CREATE SPOUSE
+
+            spouse = new Person();
+
+            System.Console.Write("What is the first name of your spouse? ");
+            spouse.firstName = System.Console.ReadLine();
+
+            System.Console.Write("What is the age of your spouse? ");
+            spouse.age = int.Parse(System.Console.ReadLine());
+
+            // ADD THIS
+            // SET SPOUSE LASTNAME = LASTNAME OF FIRST OBJECT
+
+            // ADD THIS
+            // SPOUSE ISMARRIED IS TRUE IF FIRST OBJECT ISMARRIED IS TRUE
+            
+        }
+
         public string GetFullName()
         {
 
