@@ -13,6 +13,7 @@
             // TO DO: ADD IF/THEN TO SPOUSE QUESTION
             // TO DO: SUMOFALLAGES
             // TO DO: STATICS
+            // TO DO: pretty-fy ui
             
 
             //**********************************//
@@ -26,13 +27,16 @@
             //Invoke methods for each Person object//
             //*************************************//
 
-            p1.AskForNameAndAge();
-            p1.AskForSpouseInfo();
-            p1.PrintNameAndAge();
+            p1.AskForNameAgeAndSpouse();
+                      
+            p2.AskForNameAgeAndSpouse();
+            
 
-            p2.AskForNameAndAge();
-            p2.AskForSpouseInfo();
+            p1.PrintNameAndAge();
+            p1.spouse.PrintNameAndAge();
+
             p2.PrintNameAndAge();
+            p2.spouse.PrintNameAndAge();
             
             //***********//
             //End program//
