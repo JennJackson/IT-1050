@@ -26,7 +26,7 @@
 
         }
 
-        public void AskForSpouseName()
+        public void AskForSpouseInfo()
         {
 
             System.Console.Write("Are you married? (True/False) ");
@@ -36,19 +36,24 @@
             // IF MARRIED, THEN CREATE SPOUSE
 
             spouse = new Person();
+                        
+            spouse.isMarried = isMarried;
 
             System.Console.Write("What is the first name of your spouse? ");
             spouse.firstName = System.Console.ReadLine();
 
+            spouse.lastName = lastName;
+
             System.Console.Write("What is the age of your spouse? ");
             spouse.age = int.Parse(System.Console.ReadLine());
 
-            // ADD THIS
-            // SET SPOUSE LASTNAME = LASTNAME OF FIRST OBJECT
-
-            // ADD THIS
-            // SPOUSE ISMARRIED IS TRUE IF FIRST OBJECT ISMARRIED IS TRUE
             
+
+
+            // The spouse of my spouse is myself...
+            // spouse.spouse = spouse;
+            // I need to point back at spouse #1...first object
+              
         }
 
         public string GetFullName()

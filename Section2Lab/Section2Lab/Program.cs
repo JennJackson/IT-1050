@@ -5,10 +5,12 @@
         static void Main(string[] args)
         {
 
-            // TO DO: ASSIGN SAME LAST NAME TO SPOUSES
-            // TO DO: ASSIGN ISMARRIED: TRUE VALUE TO SPOUSE OBJECT IF FIRST OBJECT ISMARRIED IS TRUE
-            // TO DO: ADD IF/THEN TO SPOUSE QUESTION
+            // Needs more spouse-ception
 
+            // TO DO: MAKE SPOUSE OF FIRST OBJECT POINT BACK AT FIRST OBJECT....(p1 --> spouse. NEED spouse --> p1).
+                    // p1 points at spouse, need spouse to point back at p1
+
+            // TO DO: ADD IF/THEN TO SPOUSE QUESTION
             // TO DO: SUMOFALLAGES
             // TO DO: STATICS
             
@@ -25,11 +27,11 @@
             //*************************************//
 
             p1.AskForNameAndAge();
-            p1.AskForSpouseName();
+            p1.AskForSpouseInfo();
             p1.PrintNameAndAge();
 
             p2.AskForNameAndAge();
-            p2.AskForSpouseName();
+            p2.AskForSpouseInfo();
             p2.PrintNameAndAge();
             
             //***********//
