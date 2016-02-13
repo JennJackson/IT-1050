@@ -38,30 +38,44 @@
                     
             System.Console.Write("Are you married? (True/False)     : ");
             isMarried = bool.Parse(System.Console.ReadLine());
+
+                    /*  USE FOR: string input above and convert to bool below. Above ReadLine would need to
+                        take in a normal string for this to work:
+
+                    if (System.Console.ReadLine().StartsWith("y")||System.Console.ReadLine().StartsWith("Y"))
+                    {
+                        isMarried = true;
+                    }
+                    */
             
-            // ADD THIS
-            // IF MARRIED, THEN CREATE SPOUSE
+            if (isMarried)
+            {
+                spouse = new Person();
 
-            spouse = new Person();
+                personCount++;
 
-            personCount++;
-                        
-            spouse.isMarried = isMarried;
+                spouse.isMarried = isMarried;
 
-            System.Console.Write("Enter your spouse's first name    : ");
-            spouse.firstName = System.Console.ReadLine();
+                System.Console.Write("Enter your spouse's first name    : ");
+                spouse.firstName = System.Console.ReadLine();
 
-            spouse.lastName = lastName;
+                spouse.lastName = lastName;
 
-            System.Console.Write("What is the age of your spouse?   : ");
-            spouse.age = int.Parse(System.Console.ReadLine());
+                System.Console.Write("What is the age of your spouse?   : ");
+                spouse.age = int.Parse(System.Console.ReadLine());
 
-            this.spouse.spouse = this;      // relates 2nd person object (spouse) back to root of the class (first object) using ' = this '
+                this.spouse.spouse = this;      // relates 2nd person object (spouse) back to root of the class (first object) using ' = this '
 
-            // The spouse of my spouse...
-            // spouse.spouse = spouse;      -- not what I want
+                        // The spouse of my spouse... is the spouse, not p1/p2
+                        // spouse.spouse = spouse;      -- not what I want
 
-            sumOfAllAges += age + spouse.age;
+                sumOfAllAges += age + spouse.age;
+            }
+            else
+            {
+                sumOfAllAges += age;
+            }
+            
 
         }
 

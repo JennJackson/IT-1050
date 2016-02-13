@@ -4,10 +4,14 @@
     {
         static void Main(string[] args)
         {
-
-            // TO DO: ADD IF/THEN TO SPOUSE QUESTION
-            // TO DO: STATICS
-            // TO DO: pretty-fy ui
+            /*
+            PROGRAM PURPOSE:
+                - Takes in name, age, and marital status of a person (Person object).
+                - Asks if the person has a spouse, and if so, creates another connected person object.
+                - Keeps track of the number of person objects and the sum of all of their ages.
+                - Finds the average age of all person objects.
+                - Prints out all info to console.
+            */
             
             //Declare/Instantiate Person objects
 
@@ -37,15 +41,22 @@
             System.Console.WriteLine("Results: ");
             System.Console.WriteLine();
 
-            p1.PrintNameAndAge();
-            p1.spouse.PrintNameAndAge();
+            p1.PrintNameAndAge();               // Print age of person 1
 
-            p2.PrintNameAndAge();
-            p2.spouse.PrintNameAndAge();
+            if (p1.isMarried)                   // If person 1 is married, print their spouse's age
+            {
+                p1.spouse.PrintNameAndAge();
+            }
+
+            p2.PrintNameAndAge();               // Print age of person 2
+
+            if (p2.isMarried)                   // If person 2 is married, print their spouse's age
+            {
+                p2.spouse.PrintNameAndAge();
+            }
 
             System.Console.WriteLine();
-
-            Person.PrintAverageAge();
+            Person.PrintAverageAge();           // Print average age of all person objects
 
             //End program
 
