@@ -25,18 +25,18 @@
 
             // Person info
 
-            System.Console.Write("What is your first name? ");
+            System.Console.Write("What is your first name?          : ");
             firstName = System.Console.ReadLine();
 
-            System.Console.Write("What is your last name? ");
+            System.Console.Write("What is your last name?           : ");
             lastName = System.Console.ReadLine();
 
-            System.Console.Write("What is your age? ");
+            System.Console.Write("What is your age?                 : ");
             age = int.Parse(System.Console.ReadLine());
             
             // Spouse info
                     
-            System.Console.Write("Are you married? (True/False) ");
+            System.Console.Write("Are you married? (True/False)     : ");
             isMarried = bool.Parse(System.Console.ReadLine());
             
             // ADD THIS
@@ -48,12 +48,12 @@
                         
             spouse.isMarried = isMarried;
 
-            System.Console.Write("What is the first name of your spouse? ");
+            System.Console.Write("Enter your spouse's first name    : ");
             spouse.firstName = System.Console.ReadLine();
 
             spouse.lastName = lastName;
 
-            System.Console.Write("What is the age of your spouse? ");
+            System.Console.Write("What is the age of your spouse?   : ");
             spouse.age = int.Parse(System.Console.ReadLine());
 
             this.spouse.spouse = this;      // relates 2nd person object (spouse) back to root of the class (first object) using ' = this '
