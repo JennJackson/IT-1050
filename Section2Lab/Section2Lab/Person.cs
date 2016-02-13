@@ -3,17 +3,25 @@
     class Person
     {
 
+        // Variable Declaration
+
         public int age;
         public string firstName;
         public string lastName;
         public bool isMarried;
         public Person spouse;
 
+        // Statics
+
+        public static int personCount = 0;
         public static double sumOfAllAges;
 
+        // Methods
 
-        public void AskForNameAgeAndSpouse()
+        public void AskForPersonInfo()              // Gets both person and their spouse info (if applicable)
         {
+
+            personCount++;
 
             // Person info
 
@@ -35,6 +43,8 @@
             // IF MARRIED, THEN CREATE SPOUSE
 
             spouse = new Person();
+
+            personCount++;
                         
             spouse.isMarried = isMarried;
 
@@ -51,13 +61,11 @@
             // The spouse of my spouse...
             // spouse.spouse = spouse;      -- not what I want
 
+            sumOfAllAges += age + spouse.age;
 
-            // close but not functioning properly
-            //sumOfAllAges += (age += spouse.age) / 2;
-              
         }
 
-        public string GetFullName()
+        public string GetFullName()             // Concatenates first/last names of each person object
         {
 
             string fullName = this.firstName + " " + this.lastName;
@@ -65,11 +73,18 @@
 
         }
 
-        public void PrintNameAndAge()
+        public void PrintNameAndAge()           // Prints name/age of each person object
+        {
+            
+            System.Console.WriteLine(this.GetFullName() + " (" + this.age + ")");
+                                    
+        }
+
+        public static void PrintAverageAge()    // Calculates average age from the sum of all person objects' ages
         {
 
-            System.Console.WriteLine(this.GetFullName() + " (" + this.age + ")");
-                        
+            System.Console.WriteLine("Average age: " + sumOfAllAges / personCount);
+
         }
 
 
