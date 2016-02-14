@@ -61,8 +61,9 @@
             //End program
 
             System.Console.WriteLine();
-            System.Console.Write("Press any key to continue...");
-            System.Console.ReadKey();
+            System.Console.Write("Press <enter> to continue...");
+            while (System.Console.ReadKey(true).Key != System.ConsoleKey.Enter) { }
+
         }
     }
 }
