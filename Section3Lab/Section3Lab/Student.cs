@@ -13,16 +13,23 @@
             this.grade = 0;
         }
 
-        public void SetGrade()
+        public void SetGrade()  // not using this yet
         {
 
         }
 
-        public void PrintInfo()
+        public string GetStudentName()
         {
-            System.Console.WriteLine("My name: " + this.name);
-            System.Console.WriteLine("My grade: " + this.grade);
-            System.Console.WriteLine("My teacher: " + this.teacher);
+            string studentName = this.name;
+            return studentName;
+        }
+
+        public void PrintStudentInfo()
+        {
+            System.Console.WriteLine("Student name: " + this.name);
+            System.Console.WriteLine(this.name + "'s grade: " + this.grade);
+            teacher.PrintInstructorInfo();
+            System.Console.WriteLine();
         }
     }
 }

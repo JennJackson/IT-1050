@@ -11,6 +11,13 @@
             Student student2 = new Student("Joe", instructor1);
             Student student3 = new Student("Melissa", instructor2);
             Student student4 = new Student("Matt", instructor2);
+
+            student1.PrintStudentInfo();
+            student2.PrintStudentInfo();
+            student3.PrintStudentInfo();
+            student4.PrintStudentInfo();
+
+            System.Console.ReadKey();
         }
     }
 }
