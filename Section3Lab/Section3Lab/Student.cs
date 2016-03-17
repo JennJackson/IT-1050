@@ -12,16 +12,10 @@
             this.teacher = teacher;
             this.grade = 0;
         }
-
-        public void SetGrade()  // not using this yet
+    
+        public void SetGrade(int grade)
         {
-
-        }
-
-        public string GetStudentName()
-        {
-            string studentName = this.name;
-            return studentName;
+            this.grade = grade;
         }
 
         public void PrintStudentInfo()

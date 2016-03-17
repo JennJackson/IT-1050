@@ -4,7 +4,6 @@
     {
         private string name;
         private string courseName;
-        private Student student;  // not using this right now?
 
         public Instructor (string name, string courseName)
         {
@@ -12,11 +11,10 @@
             this.courseName = courseName;
         }
 
-        public void SetStudentGrade() // not using this yet
+        public void SetStudentGrade(Student student, int grade)
         {
-            student.GetStudentName();
-
-
+            student.SetGrade(grade);
+            student.PrintStudentInfo();
         }
 
         public void PrintInstructorInfo()
