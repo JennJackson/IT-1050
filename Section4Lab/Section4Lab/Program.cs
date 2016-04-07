@@ -6,14 +6,8 @@ namespace Section4Lab
     {
         static void Main(string[] args)
         {
-            // ASK FOR MATINEE OR EVENING. IF STATEMENT FOR EITHER
-            // WITHIN MATINEE OR EVENING SHOW TICKET PRICES
-            // THEN ASK TICKET AGE/AMOUNT
-
-            // USE WHILE LOOP FROM OTHER LAB TO ONLY ACCEPT POSITIVE OR SPECIFIED VALUES
-            // USE THIS FOR EVERY QUESTION EVERY!!!!!
-
-
+            // Clean up code
+                        
             int adultTicketCount = 0;
             int childTicketCount = 0;
             int seniorTicketCount = 0;
