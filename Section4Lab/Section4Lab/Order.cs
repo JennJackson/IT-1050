@@ -90,17 +90,17 @@
 
 
                 System.Console.WriteLine();
-                System.Console.WriteLine("+----------------------------------------------+");
+                System.Console.WriteLine("+-----------------------------------------------------+");
                 System.Console.WriteLine(" Evening Prices");
-                System.Console.WriteLine("+----------------------------------------------+");
+                System.Console.WriteLine("+-----------------------------------------------------+");
                 System.Console.WriteLine(" Adult: $" + adultEveningPrice);
                 System.Console.WriteLine(" Child: $" + childEveningPrice);
                 System.Console.WriteLine(" Senior: $" + seniorEveningPrice);
-                System.Console.WriteLine("+----------------------------------------------+");
+                System.Console.WriteLine("+-----------------------------------------------------+");
                 System.Console.WriteLine(" Specials");
-                System.Console.WriteLine("+----------------------------------------------+");
-                System.Console.WriteLine(" - Buy 3 tickets, get 1 bag of popcorn, free!");
-                System.Console.WriteLine("+----------------------------------------------+");
+                System.Console.WriteLine("+-----------------------------------------------------+");
+                System.Console.WriteLine(" - Buy at least 3 tickets, get 1 bag of popcorn, free!");
+                System.Console.WriteLine("+-----------------------------------------------------+");
                 System.Console.WriteLine();
 
 
@@ -193,12 +193,20 @@
                 concessionCount = smallSodaCount + largeSodaCount + hotDogCount + popcornCount + candyCount;
                 concessionPriceTotal = smallSodaTotal + largeSodaTotal + hotDogTotal + popcornTotal + candyTotal;
 
-                while (popcornCount >= 1 && largeSodaCount >= 1 && ticketPriceTotal >= 2)
+                while (popcornCount >= 1 && largeSodaCount >= 1 && ticketPriceTotal >= 0)
                 {
                     popcornCount--;
                     largeSodaCount--;
-                    ticketDiscountTotal += 2;
-                    ticketPriceTotal -= 2;
+                    if (ticketPriceTotal >= 2)
+                    {
+                        ticketDiscountTotal += 2;
+                        ticketPriceTotal -= 2;
+                    }
+                    else if (ticketPriceTotal < 2 && ticketPriceTotal > 0)
+                    {
+                        ticketDiscountTotal = ticketDiscountTotal + ticketPriceTotal;
+                        ticketPriceTotal = 0;
+                    }
                 }
 
                 while (candyCount >= 3)
@@ -219,7 +227,7 @@
         //////////////////////////////////////////////////////////////////////////////////////////
 
 
-        public static int AcceptOnlyPositiveIntegers()
+        private static int AcceptOnlyPositiveIntegers()
         {
             int positiveInteger = -1;
             while (positiveInteger < 0)
@@ -227,9 +235,15 @@
                 System.Console.Write("---> ");
                 int count;
                 if (int.TryParse(System.Console.ReadLine(), out count) && count > -1) // 1st part only accepts successfully parsed ints. 2nd part only accepts ints > -1. Both parts need to be true.
+                {
                     positiveInteger = count;
+                }
                 else
+                {
+                    System.Console.ForegroundColor = System.ConsoleColor.Red;
                     System.Console.WriteLine("Please enter a positive number.");
+                    System.Console.ResetColor();
+                }
             }
             return positiveInteger;
         }
