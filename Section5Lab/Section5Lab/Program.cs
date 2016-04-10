@@ -12,12 +12,7 @@
             {
                 Course.GetCourseInfo();
             }
-            //Course.SetStudentList(students[]);
-
-           
-
-            //stem.Console.WriteLine(Course.GetStudentList());
-
+            
             System.Console.ReadKey();
         }
     }

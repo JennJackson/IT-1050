@@ -4,20 +4,21 @@
     {
         private string courseName;
         private string crnNumber;
-       // private static Student studentList[]; // ??
+        private Student[] students;
 
-/*
-        public static Student GetStudentList() { return Course.studentList; }
-        public static void SetStudentList(Student students)
-        {
-            studentList = students;
+        /*
+                public static Student GetStudentList() { return Course.studentList; }
+                public static void SetStudentList(Student students)
+                {
+                    studentList = students;
 
-        }*/
+                }*/
 
-        public Course (string courseName, string crnNumber)
+        public Course(string courseName, string crnNumber, Student[] students)
         {
             this.courseName = courseName;
             this.crnNumber = crnNumber;
+            this.students = students;
         }
 
         public static Course GetCourseInfo()
@@ -27,9 +28,7 @@
             string courseName = System.Console.ReadLine();
             System.Console.Write("Please enter the course number            : ");
             string crnNumber = System.Console.ReadLine();
-
-            Course course = new Course(courseName, crnNumber);
-
+                        
             System.Console.Write("How many students are in this course?     : ");
             int studentCount = int.Parse(System.Console.ReadLine());
 
@@ -45,6 +44,9 @@
                 string sNumber = System.Console.ReadLine();
                 students[i].SetSNumber(sNumber);
             }
+
+            Course course = new Course(courseName, crnNumber, students);
+
             foreach (Student student in students)
             {
                 System.Console.WriteLine("Student Name: " + student.GetStudentName() + ", sNumber: " + student.GetSNumber());
