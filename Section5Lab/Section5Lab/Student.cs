@@ -11,11 +11,5 @@
         public string GetSNumber() { return this.sNumber; }
         public void SetSNumber(string sNumber) { this.sNumber = sNumber; }
 
-        /*public Student (string studentName, string sNumber)
-        {
-            this.studentName = studentName;
-            this.sNumber = sNumber;
-        }
-        */
     }
 }
